@@ -1,0 +1,3 @@
+(function(){
+	alert("load success!");
+})();
