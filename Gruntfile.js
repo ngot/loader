@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = function (grunt){
 
 	var pkg = grunt.file.readJSON('package.json');
 
@@ -11,7 +11,7 @@ module.exports = function (grunt) {
 					hostname: '*',
 					base: '.',
 					keepalive: true,
-					'middleware': function (connect, options) {
+					'middleware': function (connect, options){
 						return [
 							connect.static(options.base),
 							connect.directory(options.base)

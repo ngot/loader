@@ -40,7 +40,7 @@
 			var domain;
 			var scripts = document.getElementsByTagName('script');
 			var r = new RegExp("http://([^/]+)/")
-				.exec(scripts[scripts.length - 1].src);
+					.exec(scripts[scripts.length - 1].src);
 
 			if(r)
 				domain = r[1];
