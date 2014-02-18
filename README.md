@@ -38,7 +38,7 @@
   npm install
   grunt
 ```
-you can see the example in browser at ([localhost](127.0.0.1:8000)) with port 8000;
+you can see the example in browser at ([localhost](http://127.0.0.1:8000)) with port 8000;
 
 ####Build your owen loader
 *run:*
