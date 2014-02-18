@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <script src="src/loader.js"></script>
+    <script src="src/index.js"></script>
     <script>
-        (function(){
-            $l.setJs(['/temp/t.js']);
-            $l.start();
-        })();
+        mil({
+            js: 'temp/index.js',
+            css: 'temp/style.css'
+        });
     </script>
 </body>
 </html>

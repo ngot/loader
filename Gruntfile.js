@@ -26,13 +26,13 @@ module.exports = function (grunt) {
 		uglify: {
 			all: {
 				files: {
-					"dist/loader.min.js": ["src/**/*.js"]
+					"dist/mil.min.js": ["src/**/*.js"]
 				},
 				options: {
 					mangle: false,
 					preserveComments: false,
-					sourceMap: "dist/loader.min.map",
-					sourceMappingURL: "loader.min.map",
+					sourceMap: "dist/mil.min.map",
+					sourceMappingURL: "mil.min.map",
 					report: "min",
 					beautify: {
 						ascii_only: true
