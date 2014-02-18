@@ -4,21 +4,33 @@
 
 *add script to the html：*
 ```
-    <script src="src/loader.js"></script>
-    <script>
-        (function(){
-            $l.setJs([]);
-            $l.setCss([]);
-            $l.start();
-        })();
-    </script>
+        <script src="src/index.js"></script>
+        <script>
+            mil({
+                js: [],
+                css: []
+            });
+        </script>
 ```
 
 ####APIs
-*$l is a global object.There three methodes which we can invoke as the above shows.*
-- $l.setJs(); set the js files which we want to load;this method accept a array;
-- $l.setCss(); set the css files which we want to load;this method accept a array;
-- $l.start(); start to load files;
+*mil() is a global function.It accepts a object as param*
+- example:
+```
+    {
+        js: 'index.js',
+        css: 'style.css'
+    }
+
+    or
+
+    {
+        js: ['index.js'],
+        css: ['style.css']
+    }
+```
+- js can be a string or an array.
+- css can be a string or an array.
 
 ####Develop
 *run:*
