@@ -7,6 +7,7 @@
   <script src="src/index.js"></script>
   <script>
     mil({
+      url: [],
       js: [],
       css: []
     });
@@ -28,9 +29,17 @@
     js: ['index.js'],
     css: ['style.css']
   }
+
+  or
+
+  {
+    url: '127.0.0.1:8000'
+    js: ['index.js'],
+    css: ['style.css']
+  }
 ```
-- js can be a string or an array.
-- css can be a string or an array.
+- js/css is the file load path.They can be a string or an array.
+- url is the domain which hostes the js/css files.
 
 ####Develop
 *run:*
