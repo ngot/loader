@@ -86,4 +86,5 @@ module.exports = function (grunt){
 	 * register build task
 	 */
 	grunt.registerTask('build', ['clean', 'uglify']);
+	
 };
