@@ -32,7 +32,7 @@
 
   function load(obj){
     var s = location.search;
-    if(s != '') {
+    if(s !== '') {
       location = location.pathname + '#' + s.substr(1);
       return;
     }
@@ -48,7 +48,7 @@
    * run the load task
    */
   function loader(obj){
-    var domain = obj["url"] ? obj["url"][0] : '';
+    var domain = obj.url ? obj.url[0] : '';
     var scripts = document.getElementsByTagName('script');
     var r = new RegExp("http://([^/]+)/").exec(scripts[scripts.length - 1].src);
 
@@ -59,8 +59,8 @@
         domain = location.host;
     }
 
-    var js = obj['js'];
-    var css = obj['css'];
+    var js = obj.js;
+    var css = obj.css; 
 
     var body = document.body || document.getElementsByTagName('body')[0] || document.getElementsByTagName("head")[0] || document.documentElement;
 
@@ -99,5 +99,4 @@
       else
         run_load();
     }
-
-  })(window);
+})(window);

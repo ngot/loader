@@ -1,7 +1,5 @@
 module.exports = function (grunt){
-
 	var pkg = grunt.file.readJSON('package.json');
-
 	grunt.initConfig({
 		pkg: pkg,
 		connect: {
@@ -10,9 +8,10 @@ module.exports = function (grunt){
 					port: 8000,
 					hostname: '*',
 					base: '.',
-					keepalive: true,
+					keepalive: false,
 					'middleware': function (connect, options){
 						return [
+							require('connect-livereload')(),
 							connect.static(options.base),
 							connect.directory(options.base)
 						];
@@ -46,6 +45,31 @@ module.exports = function (grunt){
 					}
 				}
 			}
+		},
+		jshint: {
+			all: {
+				src: ['src/**/*.js', 'Gruntfile.js'],
+				options: {
+					jshintrc: true
+				}
+			}
+		},
+    watch: {
+      js: {
+				files: ['src/**/*.js', 'Gruntfile.js'],
+				tasks: ['jshint'],
+				options: {
+					livereload: true
+				}
+      }
+    },
+		concurrent: {
+			target: {
+				tasks: ['watch'],
+				options: {
+					logConcurrentOutput: true
+				}
+			}
 		}
 	});
 	/**
@@ -56,7 +80,7 @@ module.exports = function (grunt){
 	/**
 	 * register default task
 	 */
-	grunt.registerTask('default', ['connect']);
+	grunt.registerTask('default', ['connect', 'concurrent', 'jshint']);
 	/**
 	 * register build task
 	 */
