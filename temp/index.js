@@ -1,3 +1,3 @@
 (function (){
-	alert("load success!");
+	console.log("load success!")
 })();
