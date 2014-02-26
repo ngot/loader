@@ -2,6 +2,11 @@
 
 [![Build Status](https://travis-ci.org/ngot/mil.png?branch=master)](https://travis-ci.org/ngot/mil)
 
+####Install
+```
+	bower install mil --save
+```
+
 ####Usage
 
 *add script to the html：*
