@@ -1,0 +1,16 @@
+{
+	"name": "mil",
+	"version": "0.0.1",
+	"main": "./dist/mil.min.js",
+	"description": "frontend loader script",
+	"author": "ngot",
+	"homepage": "https://github.com/ngot/mil",
+	"license": "MIT",
+	"files": [
+		"dist/mil.min.js",
+		"dist/mil.min.map",
+		"src/index.js",
+		"bower.json",
+		"README.md"
+	]
+}
