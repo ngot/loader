@@ -1,5 +1,7 @@
 ###Frontend loader script
 
+[![Build Status](https://travis-ci.org/ngot/mil.png?branch=master)](https://travis-ci.org/ngot/mil)
+
 ####Usage
 
 *add script to the html：*

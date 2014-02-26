@@ -49,7 +49,7 @@ module.exports = function (grunt){
 		},
 		jshint: {
 			all: {
-				src: ['src/**/*.js', 'Gruntfile.js'],
+				src: ['src/**/*.js', 'test/**/*.js', 'Gruntfile.js'],
 				options: {
 					jshintrc: true
 				}
@@ -57,7 +57,7 @@ module.exports = function (grunt){
 		},
     watch: {
       js: {
-				files: ['src/**/*.js', 'Gruntfile.js'],
+				files: ['src/**/*.js','test/**/*.js', 'Gruntfile.js'],
 				tasks: ['jshint'],
 				options: {
 					livereload: true
