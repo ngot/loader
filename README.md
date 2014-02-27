@@ -1,4 +1,4 @@
-###Frontend loader script
+###Frontend load script
 
 [![Build Status](https://travis-ci.org/ngot/mil.png?branch=master)](https://travis-ci.org/ngot/mil)
 
